@@ -20,7 +20,7 @@ function AuthGuard<P extends object>(
       if (!auth.role) {
         const search = searchParams.toString();
         const callbackUrl = search ? `${pathname}?${search}` : pathname;
-        router.replace(`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`);
+        router.replace(`/?callbackUrl=${encodeURIComponent(callbackUrl)}`);
         return;
       }
 
