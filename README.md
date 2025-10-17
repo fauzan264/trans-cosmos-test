@@ -1,5 +1,3 @@
----
-
 ````markdown
 # Trans Cosmos Test
 
@@ -94,5 +92,4 @@ Set your backend API URL:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
-
----
+````
