@@ -1,4 +1,6 @@
-```markdown
+---
+
+````markdown
 # Trans Cosmos Test
 
 This repository contains a fullstack test project built for **Trans Cosmos**.  
@@ -17,7 +19,7 @@ The project consists of a **Laravel backend API** and a **Next.js frontend** for
 
 ### Frontend
 
-- Next.js 14
+- Next.js 15.4.3
 - TypeScript
 - Tailwind CSS
 - Axios for API requests
@@ -33,15 +35,14 @@ Please refer to the detailed setup instructions for both backend and frontend in
 ---
 
 ## 📁 Project Structure
-```
 
+```bash
 trans-cosmos-test/
-├── backend/ # Laravel API for authentication, tasks, and attachments
-├── frontend/ # Next.js frontend for task management UI
-├── setup-guide.md # Environment and installation instructions
-└── README.md # Project overview
-
-````
+├── backend/          # Laravel API for authentication, tasks, and attachments
+├── frontend/         # Next.js frontend for task management UI
+├── setup-guide.md    # Environment and installation instructions
+└── README.md         # Project overview
+```
 
 ---
 
@@ -57,36 +58,41 @@ trans-cosmos-test/
 
 ## 🧑‍💻 Development
 
-**Backend:**
+### Backend
 
 ```bash
 cd backend
 php artisan serve
-````
+```
 
-**Frontend:**
+### Frontend
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-Then open the app in your browser at **[http://localhost:3000](http://localhost:3000)**
+Then open the app in your browser at:
+👉 **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
 ## 🪪 Environment Variables
 
-**Backend (.env)**
+### Backend (`.env`)
+
 Make sure to set your JWT secret key:
 
 ```env
 JWT_SECRET=your_jwt_secret
 ```
 
-**Frontend (.env)**
+### Frontend (`.env.local`)
+
 Set your backend API URL:
 
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
+
+---
