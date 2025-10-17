@@ -4,13 +4,14 @@ import snakecaseKeys from "snakecase-keys";
 
 const AUTH_URL = "/auth";
 
-export const register = ({ name, email, password }: IAuth) => {
+export const register = ({ name, email, password, role }: IAuth) => {
   return axiosInstance.post(
     `${AUTH_URL}/register`,
     snakecaseKeys({
       name,
       email,
       password,
+      role,
     })
   );
 };
