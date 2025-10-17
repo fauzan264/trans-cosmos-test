@@ -28,7 +28,7 @@ The project consists of a **Laravel backend API** and a **Next.js frontend** for
 
 Please refer to the detailed setup instructions for both backend and frontend in the following file:
 
-📄 [setup-guide.md](./setup-guide.md)
+📄 [setup-guide.md](./documentation/setup-guide.md)
 
 ---
 
@@ -38,7 +38,7 @@ Please refer to the detailed setup instructions for both backend and frontend in
 trans-cosmos-test/
 ├── backend/          # Laravel API for authentication, tasks, and attachments
 ├── frontend/         # Next.js frontend for task management UI
-├── setup-guide.md    # Environment and installation instructions
+├── documentation/    # Documentation
 └── README.md         # Project overview
 ```
 
