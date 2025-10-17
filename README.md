@@ -84,7 +84,7 @@ Make sure to set your JWT secret key:
 JWT_SECRET=your_jwt_secret
 ```
 
-### Frontend (`.env.local`)
+### Frontend (`.env`)
 
 Set your backend API URL:
 
