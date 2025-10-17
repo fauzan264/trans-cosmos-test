@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('/auth')->group(function () {
@@ -13,15 +14,15 @@ Route::prefix('/auth')->group(function () {
     });
 });
 
-Route::prefix('/task')->group(function () {
-    // Route::get('/', );
-    // Route::post('/', );
-    // Route::put('/{id}', );
-    // Route::delete('/{id}', );
-    // Route::post('/{id}/attachments', );
+Route::middleware("auth:api")->prefix('/tasks')->group(function () {
+    Route::get('/', [TaskController::class, "index"]);
+    Route::post('/', [TaskController::class, "store"]);
+    Route::put('/{id}', [TaskController::class, "update"]);
+    Route::delete('/{id}', [TaskController::class, "destroy"]);
+    // Route::post('/{id}/attachments', [TaskController::class, "uploadAttachment"]);
 });
 
-Route::prefix('/attachments')->group(function () {
+Route::middleware("auth:api")->prefix('/attachments')->group(function () {
     // Route::get('/', );
     // Route::delete('/{id}, );
 });

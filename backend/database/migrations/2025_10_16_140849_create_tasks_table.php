@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
             $table->text('description')->nullable();
             $table->enum('status', ['pending', 'in_progress', 'review', 'completed'])->default('pending');
             $table->enum('priority', ['low', 'medium', 'high'])->default('medium');
@@ -25,6 +25,7 @@ return new class extends Migration
                   ->constrained('users')
                   ->onDelete('restrict');                  
             $table->date('due_date')->nullable();
+            $table->softDeletes();
             $table->timestamps();
 
             $table->index('created_by');
@@ -33,6 +34,7 @@ return new class extends Migration
             $table->index('priority');
             $table->index('due_date');
             $table->index('created_at');
+            $table->unique(['title', 'deleted_at']);
         });
     }
 
