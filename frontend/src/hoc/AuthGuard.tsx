@@ -25,11 +25,7 @@ function AuthGuard<P extends object>(
       }
 
       if (auth.role && !allowedRoles.includes(auth.role)) {
-        if (auth.role === "CUSTOMER") {
-          router.replace("/");
-        } else {
-          router.replace("/admin");
-        }
+        router.replace("/admin");
         return;
       }
 
