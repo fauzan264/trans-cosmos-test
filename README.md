@@ -1,4 +1,3 @@
-````markdown
 # Trans Cosmos Test
 
 This repository contains a fullstack test project built for **Trans Cosmos**.  
@@ -92,4 +91,3 @@ Set your backend API URL:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
-````
